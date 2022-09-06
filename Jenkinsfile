@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+		node {
+			label "built-in"
+		}
+	}
 
     stages {
         stage ('Compile Stage') {
@@ -33,7 +37,7 @@ pipeline {
 
             steps {
                 
-                    echo "This is test branch"
+                    echo "This is master branch"
                 }
             
         }
